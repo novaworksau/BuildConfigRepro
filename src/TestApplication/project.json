@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0",
@@ -19,7 +19,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "TestLibrary": "1.0.0-*"
   },
 
   "tools": {
@@ -36,7 +37,14 @@
       ]
     }
   },
-
+  "configurations": {
+    "DebugClient1": {
+      "buildOptions": {
+        "define": [ "DEBUG", "TRACE", "POSTGRESQL" ],
+        "optimize": false
+      }
+    }   
+  },
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true
